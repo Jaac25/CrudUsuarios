@@ -1,1 +1,12 @@
-<h1>MOSTRAR</h1>
+<link rel="stylesheet" href="/src/app/components/mostrar/mostrar.component.css" type="text/css" media="all">
+
+<h1>Usuarios</h1>
+<div>
+    <ng-container>
+        <div *ngFor='let usuario of datosUsuarios'>
+            <div class="Container border">
+                <h4>{{usuario.nombres}}</h4>
+            </div>
+        </div>
+    </ng-container>
+</div>

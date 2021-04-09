@@ -3,14 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'inicio', loadChildren: () => 
+    import('./components/mostrar/mostrar.module').then(m => m.MostrarModule)
+  },
+  {
     path: 'agregar', loadChildren: () => 
     import('./components/agregar/agregar.module').then(m => m.AgregarModule)
   },
-  {
-    path: 'usuarios', loadChildren: () => 
-    import('./components/mostrar/mostrar.module').then(m => m.MostrarModule)
-  },
-  {path:'',pathMatch: 'full', redirectTo: 'agregar'}
+  
+  {path:'',pathMatch: 'full', redirectTo: 'inicio'}
 ];
 
 @NgModule({

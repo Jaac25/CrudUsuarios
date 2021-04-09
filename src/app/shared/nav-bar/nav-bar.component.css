@@ -1,0 +1,17 @@
+#ventanaLogin{
+    background: linear-gradient(white, rgb(141, 226, 4));
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+    
+    top: 15%;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 10px;
+    max-width: 450px;
+    min-width: 320px;
+    
+    width: 100%;
+    z-index: 999;
+}

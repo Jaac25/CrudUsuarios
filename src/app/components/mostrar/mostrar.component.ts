@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UsuarioService} from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-mostrar',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MostrarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public usuarioService: UsuarioService
+  ) { }
+
+  datosUsuarios: any;
 
   ngOnInit(): void {
+    this.todosUsuarios();
   }
 
+  async todosUsuarios() {
+    this.datosUsuarios = await this.usuarioService.getUsuarios().toPromise();
+    console.log("????????????????????????")
+    console.log(this.datosUsuarios);
+    console.log("????????????????????????")
+  }
 }
