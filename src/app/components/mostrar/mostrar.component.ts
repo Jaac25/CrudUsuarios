@@ -8,20 +8,28 @@ import {UsuarioService} from 'src/app/services/usuario.service';
 })
 export class MostrarComponent implements OnInit {
 
+  
+
   constructor(
+    
     public usuarioService: UsuarioService
   ) { }
 
   datosUsuarios: any;
+  numbers:Array<any> = [];
 
   ngOnInit(): void {
     this.todosUsuarios();
+    this.showArreglo();
   }
 
   async todosUsuarios() {
     this.datosUsuarios = await this.usuarioService.getUsuarios().toPromise();
-    console.log("????????????????????????")
-    console.log(this.datosUsuarios);
-    console.log("????????????????????????")
+    //console.log(this.datosUsuarios);
+    
+  }
+
+  showArreglo(){
+    this.numbers = Array.from({length:10},(v,k)=>k+5);
   }
 }
