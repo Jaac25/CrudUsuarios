@@ -9,3 +9,9 @@ div{
 .pago{
     text-decoration: line-through;
 }
+
+
+.secundario{
+     background: gold;
+    color: black; 
+}

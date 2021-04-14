@@ -8,6 +8,8 @@ import { Articulo } from 'src/app/Modelo/articulo';
 })
 export class ArticuloComponent implements OnInit {
 
+  listo = false;
+
   /* recibiendo un parametro
   Propiedades de entrada y salida */
 
