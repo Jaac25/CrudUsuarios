@@ -1,0 +1,11 @@
+div{
+    padding: 5px;
+}
+
+.total{
+    color: red;
+}
+
+.pago{
+    text-decoration: line-through;
+}
