@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ArticulosComponent } from './components/articulos/articulos.component';
+import { ArticuloComponent } from './components/articulo/articulo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    ArticulosComponent,
+    ArticuloComponent
   ],
   imports: [
     BrowserModule,
