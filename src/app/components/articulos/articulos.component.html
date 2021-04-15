@@ -1,0 +1,40 @@
+<section>
+
+    <!--
+        En este caso solo muestra informacion
+    -->
+    <div *ngFor='let articulo of articulos'>
+        {{articulo.descripcion}}
+    </div>
+    
+    <!--
+        En este apartado llamamos nuestro componente 
+        app-producto del componente producto.component.ts
+        en el html articulos.component.html el cual ya tiene
+        agregado la etiqueta de <app-articulos> en app.component.html
+    -->
+
+    <!--
+        para pasar la informacion hacemos referencia a su propiedad de entrada,
+        que es creada en articulo.component.ts
+        con los [] y se asigna el objeto
+        [articulo] = "articulo"
+    -->
+
+    <!--
+        Para especificar el evento de eliminar se 
+        realiza a traves de ()
+    -->
+    <div>
+        <app-articulo 
+            *ngFor="let articulo of articulos"
+            [articulo] = 'articulo'
+            (deleteArticulo)="deleteArticulo($event)"
+        >
+        </app-articulo>
+    </div>
+    
+
+</section>
+
+

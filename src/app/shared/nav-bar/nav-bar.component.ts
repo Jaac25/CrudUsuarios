@@ -50,5 +50,4 @@ export class NavBarComponent implements OnInit {
       alert("No se guardó");
     }
   }
-
 }

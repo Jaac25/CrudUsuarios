@@ -1,0 +1,36 @@
+<div class="container">
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody [ngClass]="{'pago':articulo.pago}">
+            <td>
+                <!--
+                    marque si el elemento esta marcado (true) o no (false)
+                    acceder a las propiedades de forma dinamica la cual estaremos modificando
+                    [checked]="articulo.pago"
+                -->
+                <input type="checkbox" [checked]="articulo.pago" (change)="onToggle(articulo)" name="" id="">
+                {{articulo.descripcion}}
+            </td>
+            <td>{{articulo.precio | currency}}</td>
+            <td>{{articulo.cantidad | number}}</td>
+            <td class="total">{{(articulo.precio * articulo.cantidad) | currency}}</td>
+        </tbody>
+    </table>
+
+    <div >
+        <button class="btn btn-dark" (click)="onDelete(articulo)">Eliminar</button>
+        <br>
+        <input type="checkbox" (change)="listo = !listo">
+        cabiar color
+        <div [ngClass]="{'secundario': listo}" class="alert alert-primary" role="alert">
+            A simple primary alert—check it out!
+        </div>
+    </div>
+</div>
