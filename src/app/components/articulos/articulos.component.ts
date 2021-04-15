@@ -42,6 +42,9 @@ export class ArticulosComponent implements OnInit {
       }
     ];
   }
+
+  /* filter devuelve todos los elementos que 
+  son diferentes por id que se reciben en el metodo */
   deleteArticulo(articulo:Articulo){
     this.articulos = this.articulos.filter(item => item.id != articulo.id);
   }

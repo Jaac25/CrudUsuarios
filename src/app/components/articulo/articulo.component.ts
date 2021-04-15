@@ -17,6 +17,8 @@ export class ArticuloComponent implements OnInit {
 
   //evento
   @Input() articulo: Articulo = new Articulo();
+
+  //evento personalizado no es nativo del componente
   @Output() deleteArticulo: EventEmitter<Articulo> = new EventEmitter();
 
 
