@@ -1,7 +1,9 @@
 
+//Importa las interfaces de component y Oninit para interactuar con los componentes
 import {Component, OnInit } from '@angular/core';
 import { Articulo } from '../../Modelo/articulo';
 
+//Define los atributos del componente articulos con las direcciones a sus archivos html y de estilo css
 @Component({
   selector: 'app-articulos',
   templateUrl: './articulos.component.html',
@@ -18,6 +20,7 @@ export class ArticulosComponent implements OnInit {
   //Ciclo de vida de un componente
   ngOnInit(): void {
 
+    //Define los valores de los atributos creados en el archivo articulo.ts del modelo
     this.articulos=[
       {
         id:0,

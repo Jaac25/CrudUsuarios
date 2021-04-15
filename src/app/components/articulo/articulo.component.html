@@ -9,16 +9,19 @@
                 <th scope="col">Total</th>
             </tr>
         </thead>
+        <!-- Llama la clase de artículo, la variable pago -->
         <tbody [ngClass]="{'pago':articulo.pago}">
             <td>
                 <!--
                     marque si el elemento esta marcado (true) o no (false)
                     acceder a las propiedades de forma dinamica la cual estaremos modificando
                     [checked]="articulo.pago"
+                    La propiedad onToggle reacciona cuando el usuario selecciona el checkbox
                 -->
                 <input type="checkbox" [checked]="articulo.pago" (change)="onToggle(articulo)" name="" id="">
                 {{articulo.descripcion}}
             </td>
+            <!-- define el precio de tipo currency y la cantidad de tipo number -->
             <td>{{articulo.precio | currency}}</td>
             <td>{{articulo.cantidad | number}}</td>
             <td class="total">{{(articulo.precio * articulo.cantidad) | currency}}</td>
@@ -26,10 +29,11 @@
     </table>
 
     <div >
+        <!-- llama la función onDelete para eliminar "articulo" del DOM -->
         <button class="btn btn-dark" (click)="onDelete(articulo)">Eliminar</button>
         <br>
         <input type="checkbox" (change)="listo = !listo">
-        cabiar color
+        cambiar color
         <div [ngClass]="{'secundario': listo}" class="alert alert-primary" role="alert">
             A simple primary alert—check it out!
         </div>

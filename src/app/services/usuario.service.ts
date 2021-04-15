@@ -8,6 +8,8 @@ const URL = environment.url;
 @Injectable({
   providedIn: 'root'
 })
+
+//clase de UsuarioService
 export class UsuarioService {
 
   constructor(
