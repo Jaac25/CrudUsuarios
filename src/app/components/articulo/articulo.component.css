@@ -1,16 +1,17 @@
+/*Establece el relleno por los lados de la etiqueta div*/
 div{
     padding: 5px;
 }
-
+/*Establece el color del campo de tabla a rojo*/
 .total{
     color: red;
 }
-
+/*traza el tachado en "pago" de la tabla*/
 .pago{
     text-decoration: line-through;
 }
 
-
+/**/
 .secundario{
      background: gold;
     color: black; 
