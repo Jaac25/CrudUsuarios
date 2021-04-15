@@ -17,4 +17,18 @@ export class UsuarioService {
   public getUsuarios() {
     return this.http.get(`${URL}/usuario/todos`)
   }
+
+  public async crearUsuario (nombres: string, apellidos: string, documento: string, telefono: string, ciudad: string, direccion: string, correo: string, password: string) {
+    const usuario = {nombres, apellidos, documento, telefono, ciudad, direccion, correo, password};
+    return new Promise(resolve => {
+      this.http.post(`${URL}/usuario/crear`, usuario)
+      .subscribe((res: any) => {
+        if(res.ok){
+          resolve(true);
+        }else{
+          resolve(false);
+        }
+      });
+    });
+  }
 }

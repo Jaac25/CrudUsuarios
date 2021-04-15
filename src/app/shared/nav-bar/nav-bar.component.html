@@ -18,12 +18,25 @@
 </nav>
 
 <div id="ventanaLogin" *ngIf="mostrarLogin" class="">
-  <form id="formulario" action='/lugares'>
-     <label for="usuarioLogin">Correo</label>
-     <input type="email" id="entradaLogin" name="usuarioLogin"><br>
-     <label for="contrasenaLogin">ContraseÃ±a</label>
-     <input type="password" id="entradaLogin" name="contrasenaLogin"><br><br>
-     <button type="submit" id="botonIniciar" >Iniciar sesiÃ³n</button>
+  <form id="formulario">
+     <label for="nombres">Nombres</label>
+     <input type="text" id="nombres" name="nombres" [(ngModel)]='nombres'><br>
+     <label for="apellidos">Apellidos</label>
+     <input type="text" id="apellidos" name="apellidos" [(ngModel)]='apellidos'><br>
+     <label for="documento">Documento</label>
+     <input type="text" id="documento" name="documento" [(ngModel)]='documento'><br>
+     <label for="telefono">Teléfono</label>
+     <input type="text" id="telefono" name="telefono" [(ngModel)]='telefono'><br>
+     <label for="ciudad">Ciudad</label>
+     <input type="text" id="ciudad" name="ciudad" [(ngModel)]='ciudad'><br>
+     <label for="direccion">Dirección</label>
+     <input type="text" id="direccion" name="direccion" [(ngModel)]='direccion'><br>
+     <label for="correo">Correo</label>
+     <input type="text" id="correo" name="correo" [(ngModel)]='correo'><br>
+     <label for="password">Contraseña</label>
+     <input type="text" id="password" name="password" [(ngModel)]='password'><br><br>
+
+     <button type="submit" id="botonIniciar" (click)="verificarUsuario()">Iniciar sesión</button>
      <button type="button" (click)='mostrarLogin=false' id="botonCancelar">Cancelar</button>
   </form>
 </div>
